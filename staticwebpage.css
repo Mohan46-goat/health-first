@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* Header & Navigation */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.navbar-brand h1 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.follow {
+    margin-left: 150px;
+}
+
+/* Hero Section */
+.content {
+    text-align: center;
+    line-height: 2rem;
+    margin-top: 20px;
+    margin-bottom:90px
+}
+
+.content h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Image Gallery */
+.photos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 2rem;
+}
+
+.photos img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photos img:hover {
+    transform: scale(1.05);
+}
+
+/* About Section */
+.title {
+    margin-top: 80px;
+}
+
+.photo img {
+    width: 380px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Blog Section */
+.title-3 {
+    margin-top: 150px;
+    margin-bottom: 60px;
+}
+
+.card {
+    margin-right: 50px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Testimonial Section */
+.photo-5 {
+    background-image: url(img-11.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.photo-5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.photo-5 h6, .photo-5 p {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+.first-box{
+    background-color: palegreen;
+}
+
+.gallery{
+    margin-top: -60px;
+}
+
+/* BMI Calculator */
+.form-control, .form-select {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+table, th, td {
+    border: 1px dashed black !important;
+    border-top: none !important;
+    border-left: none !important;
+}
+
+table, tbody, .msp {
+    border-right: none !important;
+}
+
+/* Footer */
+.heading {
+    margin-right: 190px;
+    margin-left: 6px;
+}
+
+.last {
+    padding-top: 40px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .follow {
+        margin-left: 50px;
+    }
+    
+    .card {
+        margin-right: 30px;
+    }
+    .gallery{
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .navbar-collapse {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+    
+    .follow {
+        margin-left: 0;
+    }
+    
+    .content-3 {
+        padding: 0 1rem;
+    }
+    
+    .card {
+        margin: 0 auto 2rem;
+    }
+    .gallery{
+        margin-top: 0px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .photos {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .photos img {
+        margin-right: 0;
+    }
+    
+    .content-3 {
+        font-size: small;
+        text-align: center;
+    }
+    
+    .container-fluid.d-flex.bg-dark {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    input[type="text"], input[type="button"] {
+        margin: 0.5rem;
+        width: 100%;
+    }
+    .gallery{
+        margin-top: 0px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .content h5 {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    .photos img {
+        width: 90%;
+        height: auto;
+    }
+    
+    .card {
+        width: 90%;
+        margin: 0 auto 2rem;
+    }
+    
+    .photo-5 {
+        height: 50vh;
+    }
+    
+    .photo-5 h6 {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+    .gallery{
+        margin-top: 0px;
+        justify-content: center;
+    }
+}
